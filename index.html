@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PRIME SOFT — software, hosting and web portals in Lviv</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F7F4EF;--ink:#121212;--tomato:#E4572E;--tomato-d:#c64621;--soft:#ece7de;--white:#fff;--mute:#66625c;--line:#e0dad0;
+--sans:"Albert Sans",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--tomato);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:74px}
+.logo{font-weight:800;font-size:21px;text-decoration:none;letter-spacing:-.02em}
+.logo sup{font-family:var(--mono);font-size:12px;color:var(--tomato);font-weight:600;margin-left:2px}
+nav a{margin-left:26px;text-decoration:none;font-weight:500;font-size:15px;color:var(--mute)}
+nav a:hover{color:var(--ink)}
+.hero{padding:48px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hero h1{font-weight:800;font-size:clamp(40px,5.8vw,78px);line-height:1;letter-spacing:-.04em}
+.hero h1 span{color:var(--tomato)}
+.hero p{margin-top:22px;font-size:19px;color:var(--mute);max-width:44ch}
+.btn{display:inline-block;margin-top:30px;padding:15px 28px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:700;border-radius:10px}
+.btn:hover{background:var(--tomato)}
+.grid{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;font-family:var(--mono);font-size:13px}
+.grid span{aspect-ratio:1;display:grid;place-items:center;border-radius:4px;background:var(--soft);color:#a39d93}
+.grid span.p{background:var(--ink);color:var(--paper);font-weight:600}
+.grid span.p.hi{background:var(--tomato)}
+.cap{font-family:var(--mono);font-size:13px;color:var(--mute);margin-top:12px}
+section{padding:88px 0}
+h2{font-weight:800;font-size:clamp(32px,4.2vw,54px);line-height:1;letter-spacing:-.035em;margin-bottom:14px}
+.sub{font-size:18px;color:var(--mute);max-width:56ch;margin-bottom:44px}
+.svc{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.s{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:28px;grid-column:span 2}
+.s.w{grid-column:span 3}
+.s .n{font-family:var(--mono);font-size:13px;color:var(--tomato);font-weight:600}
+.s h3{font-size:23px;font-weight:700;letter-spacing:-.02em;margin:8px 0}
+.s p{color:var(--mute);font-size:16px}
+.s.dark{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.s.dark p{color:#b9b4ab}
+.appr{background:var(--ink);color:var(--paper)}
+.appr .sub{color:#b9b4ab}
+.ap{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid #333}
+.ap div{padding:28px 28px 0 0}
+.ap div:not(:first-child){padding-left:28px;border-left:1px solid #333}
+.ap b{font-family:var(--mono);color:var(--tomato);font-size:14px}
+.ap h3{font-size:22px;margin:8px 0 6px}
+.ap p{color:#b9b4ab}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+dt{font-family:var(--mono);font-weight:600;color:var(--tomato);font-size:13px;margin-top:18px}
+dd{font-size:18px}
+form{display:grid;gap:14px}
+label{font-size:14px;font-weight:500;color:var(--mute)}
+input,select,textarea{display:block;width:100%;margin-top:6px;padding:14px 16px;border-radius:10px;border:1.5px solid var(--line);background:var(--white);font:inherit;color:var(--ink)}
+input:focus,select:focus,textarea:focus{border-color:var(--ink)}
+textarea{min-height:110px}
+button{justify-self:start;padding:15px 28px;border-radius:10px;background:var(--tomato);color:#fff;border:0;font:inherit;font-weight:700;cursor:pointer}
+button:hover{background:var(--tomato-d)}
+footer{border-top:1px solid var(--line);color:var(--mute);font-size:14px;padding:34px 0}
+footer ul{list-style:none;margin-top:12px;columns:2;column-gap:32px}
+@media (max-width:960px){
+  nav{display:none}
+  .hero .wrap,.contact .wrap{grid-template-columns:1fr}
+  .svc{grid-template-columns:1fr 1fr}.s,.s.w{grid-column:span 1}
+  .ap{grid-template-columns:1fr}.ap div{padding-left:0!important;border-left:0!important;padding-bottom:20px}
+  footer ul{columns:1}
+}
+@media (max-width:540px){.svc{grid-template-columns:1fr}.grid{font-size:10px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#">PRIME SOFT<sup>LVIV</sup></a>
+  <nav><a href="#services">Services</a><a href="#approach">Approach</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Software that stands on its own, <span>like a prime</span></h1>
+      <p>PRIME SOFT is a Lviv IT company. We develop software, build web portals, host and process data, and manage computer infrastructure for our clients.</p>
+      <a class="btn" href="#contact">Start a project</a>
+    </div>
+    <div>
+      <div class="grid" id="grid" aria-hidden="true"></div>
+      <p class="cap">// primes up to 100, highlighted</p>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="padding-top:0">
+  <div class="wrap">
+    <h2>Services</h2>
+    <p class="sub">From code to servers — everything your digital product needs.</p>
+    <div class="svc">
+      <div class="s w dark"><span class="n">02</span><h3>Software development</h3><p>Custom applications, internal tools and integrations built for your business.</p></div>
+      <div class="s w"><span class="n">03</span><h3>Web portals</h3><p>Portals, marketplaces and content platforms with user accounts.</p></div>
+      <div class="s"><span class="n">05</span><h3>IT consulting</h3><p>Technology choices, audits and planning.</p></div>
+      <div class="s"><span class="n">07</span><h3>Hosting and data</h3><p>Hosting, data processing and backups.</p></div>
+      <div class="s"><span class="n">11</span><h3>Infrastructure management</h3><p>We run and monitor your computer systems.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="appr" id="approach">
+  <div class="wrap">
+    <h2>How we work</h2>
+    <p class="sub">Simple rules that keep projects on track.</p>
+    <div class="ap">
+      <div><b>01</b><h3>Understand first</h3><p>We start with your goals, not with a tech stack.</p></div>
+      <div><b>02</b><h3>Ship in steps</h3><p>Short iterations, each ending with something you can use.</p></div>
+      <div><b>03</b><h3>Stay after launch</h3><p>We host, monitor and improve what we build.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Tell us about your project</h2>
+      <p class="sub">We'll reply with questions, an estimate and next steps.</p>
+      <dl>
+        <dt>address</dt><dd>23-V vul. Holovatskoho<br>Lviv, 79018, Ukraine</dd>
+        <dt>email</dt><dd><a href="mailto:support@primesoftllc.shop">support@primesoftllc.shop</a></dd>
+        <dt>director</dt><dd>Vladyslav Hrykun</dd>
+      </dl>
+    </div>
+    <form id="f">
+      <label>Name<input name="name" required></label>
+      <label>Email<input name="email" type="email" required></label>
+      <label>Service<select name="type"><option>Software development</option><option>Web portal</option><option>IT consulting</option><option>Hosting and data</option><option>Infrastructure management</option></select></label>
+      <label>About the project<textarea name="msg" required></textarea></label>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  "PRIME SOFT" LLC © 2026
+  <ul>
+    <li>62.01 Computer programming</li><li>62.02 Computer consultancy</li>
+    <li>62.03 Computer facilities management</li><li>63.11 Data processing, hosting and related activities</li>
+    <li>63.12 Web portals</li><li>63.99 Other information service activities</li>
+  </ul>
+</div></footer>
+<script>
+const g=document.getElementById('grid');
+const isP=n=>{if(n<2)return false;for(let i=2;i*i<=n;i++)if(n%i===0)return false;return true};
+const hi=[2,3,5,7,11];
+for(let n=1;n<=100;n++){const s=document.createElement('span');s.textContent=n;if(isP(n)){s.className='p'+(hi.includes(n)?' hi':'')}g.appendChild(s)}
+document.getElementById('f').addEventListener('submit',e=>{
+  e.preventDefault();const d=new FormData(e.target);
+  location.href='mailto:support@primesoftllc.shop?subject='+encodeURIComponent(d.get('type')+' — '+d.get('name'))+'&body='+encodeURIComponent(d.get('msg')+'\n\n'+d.get('email'));
+});
+</script>
+</body>
+</html>
